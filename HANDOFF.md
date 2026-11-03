@@ -2,6 +2,13 @@
 
 > Read this first, then `project-brief.md`. This file gives you the context and decisions from the planning session; `project-brief.md` is the executable spec you build against.
 
+## Status (2026-11-03)
+
+Implemented and verified locally. The fullstack MVP is done — backend (Spring
+Boot 3.5 + Flyway + JWT/RBAC) and frontend (Angular 20, role-based screens).
+See the [README](README.md) for running it. Future work continues on the
+`develop` branch.
+
 ## What this is
 
 **CoopLedger** — a fullstack savings-and-loan cooperative (koperasi simpan pinjam) system. It is a real, sellable portfolio project to demonstrate **Angular + Java Spring Boot** for a banking / software-house placement.

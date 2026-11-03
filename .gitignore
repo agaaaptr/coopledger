@@ -21,6 +21,10 @@ frontend/.vite/
 .vscode/
 *.iml
 
+
+# Local Claude Code settings (machine-specific absolute paths)
+.claude/settings.local.json
+
 # >>> noir:ignore >>>
 /.noir/store/
 /.noir/handoff/
@@ -31,6 +35,3 @@ frontend/.vite/
 /.noir/audit/integration-*.jsonl
 /.noir/dedup-cache.json
 # <<< noir:ignore <<<
-
-# Local Claude Code settings (machine-specific absolute paths)
-.claude/settings.local.json
