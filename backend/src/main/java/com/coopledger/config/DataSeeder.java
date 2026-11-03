@@ -35,9 +35,16 @@ public class DataSeeder implements ApplicationRunner {
             return;
         }
         seed("admin", "admin123", "Admin Koperasi", Role.ADMIN, null);
+        seed("admin2", "admin123", "Ratna Dewi", Role.ADMIN, null);
         seed("teller", "teller123", "Teller Koperasi", Role.TELLER, null);
-        members.findByMemberNumber("M-0001").ifPresent(m ->
-                seed("member", "member123", m.getFullName(), Role.MEMBER, m.getId()));
+        seed("teller2", "teller123", "Andi Wijaya", Role.TELLER, null);
+        // demo member logins for the first five seeded members (M-0001..M-0005)
+        for (int i = 1; i <= 5; i++) {
+            final String number = String.format("M-%04d", i);
+            final String username = i == 1 ? "member" : "member" + i;
+            members.findByMemberNumber(number).ifPresent(m ->
+                    seed(username, "member123", m.getFullName(), Role.MEMBER, m.getId()));
+        }
     }
 
     private void seed(String username, String rawPassword, String fullName, Role role, Long memberId) {
