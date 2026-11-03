@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:coopledger;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DEFAULT_NULL_ORDERING=HIGH
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+app:
+  jwt:
+    secret: test-secret-0123456789abcdef0123456789abcdef
+    expiration-ms: 3600000

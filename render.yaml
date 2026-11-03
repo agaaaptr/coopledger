@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: coopledger-api
+    runtime: docker
+    plan: free
+    region: singapore
+    healthCheckPath: /api/health
+    autoDeploy: true
+    envVars:
+      - key: JWT_SECRET
+        generateValue: true
+      # DATABASE_URL (Neon Postgres, JDBC format) is set manually in the Render
+      # dashboard — it is a secret and must not live in this file.
+      # Format: jdbc:postgresql://USER:PASSWORD@HOST/DBNAME?sslmode=require
+      # Use the Neon -pooler connection string.

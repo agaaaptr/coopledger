@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: coopledger
+  datasource:
+    url: ${DATABASE_URL:jdbc:postgresql://localhost:5432/coopledger}
+    username: ${DB_USERNAME:coopledger}
+    password: ${DB_PASSWORD:coopledger}
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+server:
+  port: ${PORT:8080}
+
+app:
+  jwt:
+    # dev default only — set JWT_SECRET in production (>= 32 bytes for HS256)
+    secret: ${JWT_SECRET:coopledger-dev-only-secret-change-me-0123456789abcdef}
+    expiration-ms: 86400000
