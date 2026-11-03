@@ -20,3 +20,17 @@ frontend/.vite/
 .idea/
 .vscode/
 *.iml
+
+# >>> noir:ignore >>>
+/.noir/store/
+/.noir/handoff/
+/.noir/.env
+/.noir/.env.*
+!/.noir/.env.example
+/.noir/transcripts/
+/.noir/audit/integration-*.jsonl
+/.noir/dedup-cache.json
+# <<< noir:ignore <<<
+
+# Local Claude Code settings (machine-specific absolute paths)
+.claude/settings.local.json
