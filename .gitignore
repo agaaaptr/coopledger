@@ -25,6 +25,9 @@ frontend/.vite/
 # Local Claude Code settings (machine-specific absolute paths)
 .claude/settings.local.json
 
+# Interview practice sandbox (local, throwaway)
+sandbox/
+
 # >>> noir:ignore >>>
 /.noir/store/
 /.noir/handoff/
